@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spam Checker</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #121212;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        h1 {
+            color: #fff;
+            text-align: center;
+        }
+
+        form {
+            max-width: 600px;
+            width: 100%;
+            background-color: #333;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 16px;
+            color: #fff;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 24px;
+            box-sizing: border-box;
+            border: 1px solid #555;
+            border-radius: 4px;
+            background-color: #444;
+            color: #fff;
+            font-size: 16px;
+            resize: none;
+            height: 200px; /* Enlarged height */
+        }
+
+        button {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 14px 24px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1><b>Fill the message below to check Spam or not</b></h1>
+    <br>
+    <form action="http://127.0.0.1:5000" method="POST">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" placeholder="Enter the message here" required></textarea>
+        <br>
+        <button type="submit">Check</button>
+    </form>
+</body>
+</html>
